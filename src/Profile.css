@@ -1,0 +1,128 @@
+:root {
+  --dark-navy: #040707;
+  --light-navy: #16171a;
+  --blue-button: #3f96d1;
+  --blue-font: #1a67a0;
+}
+
+.news-feed {
+  width: 78%;
+  background-color: var(--dark-navy);
+  height: 100vh;
+  margin-left: 18vw;
+  color: white;
+  border: solid 1px rgb(70, 70, 70);
+}
+
+.profile-header {
+  display: flex;
+  height: 7vh;
+  box-sizing: border-box;
+}
+
+.back-button {
+  width: 8%;
+  background-color: var(--dark-navy);
+  border: none;
+  margin: 1%;
+  box-sizing: border-box;
+  margin-right: 4%;
+}
+
+.back-button > img {
+  width: auto;
+  height: 50%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.posts-number {
+  font-size: 12px;
+  margin: 0;
+  margin-top: 2%;
+  color: gray;
+}
+
+.account-name {
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.cover-picture {
+  width: 100%;
+  height: 28vh;
+}
+
+.cover-picture > img {
+  height: 100%;
+  width: 100%;
+}
+
+.profile-picture {
+  width: 19vh;
+  height: 19vh;
+  border-radius: 50%;
+  border: solid 4px var(--dark-navy);
+  position: relative;
+  top: -9vh;
+  left: 1vw;
+}
+
+.profile-picture > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1%;
+  width: 34%;
+}
+
+.profile-buttons > button {
+  background-color: transparent;
+  border: solid 1px rgb(129, 128, 128);
+  color: white;
+}
+
+.rounded-button {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oval-button {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  width: 110px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-buttons img {
+  height: 65%;
+  width: auto;
+  margin: 0;
+}
+
+.profile-pic-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+}

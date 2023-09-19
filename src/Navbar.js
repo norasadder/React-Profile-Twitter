@@ -18,7 +18,6 @@ export default function Navbar() {
   });
   return (
     <div className="navbar">
-      <logo />
       <ul>
         <li className="list-item">
           <img
