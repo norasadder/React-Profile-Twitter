@@ -84,9 +84,88 @@ function ProfileInfo({
   );
 }
 
-export default function NewsFeed() {
+function ProfileNavbar() {
+  const NAVBAR_ITEMS = ["Posts", "Replies", "Media", "Likes"];
+  let arr = [];
+  NAVBAR_ITEMS.forEach((item) => {
+    arr.push(<div>{item}</div>);
+  });
+
+  return <div className="profile-navbar">{arr}</div>;
+}
+
+function ReostedPost({
+  accountName,
+  postOwnerAccountName,
+  postOwnerUserName,
+  postContent,
+  postDate,
+  commentNumber,
+  likesNumber,
+  repostsNumber,
+  interactionsNumber,
+}) {
   return (
-    <div className="news-feed">
+    <div className="reposted-post">
+      <div className="repost-header">
+        <img src={require("./images/repost.png")}></img>
+        {accountName} reposted
+      </div>
+
+      <div className="repost-body">
+        <div className="repost-owner-img">
+          <img src={require("./images/Profile.png")} />
+        </div>
+
+        <div className="repost-owner-info-content-container">
+          <div className="repost-owner-info-more-container">
+            <div className="repost-owner-info">
+              {postOwnerAccountName}{" "}
+              <span>
+                @{postOwnerUserName} . {postDate}
+              </span>
+            </div>
+          </div>
+
+          <div className="repost-content">{postContent}</div>
+
+          <div className="post-interactions">
+            <div className="post-interactions-item">
+              <img src={require("./images/comment.png")} />
+              <p> {commentNumber} </p>
+            </div>
+
+            <div className="post-interactions-item">
+              <img src={require("./images/like.png")} />
+              <p> {likesNumber} </p>
+            </div>
+
+            <div className="post-interactions-item">
+              <img src={require("./images/repost.png")} />
+              <p> {repostsNumber} </p>
+            </div>
+
+            <div className="post-interactions-item">
+              <img src={require("./images/insight.png")} />
+              <p> {interactionsNumber} </p>
+            </div>
+
+            <button className="post-interactions-item">
+              <img src={require("./images/share.png")} />
+            </button>
+          </div>
+        </div>
+        <button>
+          <img src={require("./images/More2.png")} />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default function Profile() {
+  return (
+    <div className="profile">
       <ProfileHeader accountName="React" postsNumber="2611" />
       <CoverPicture accountName="React" />
       <div className="profile-pic-buttons-container">
@@ -101,6 +180,18 @@ export default function NewsFeed() {
         joinDate="July 2013"
         followingNumber="267"
         followersNumber="708.1K"
+      />
+      <ProfileNavbar />
+      <ReostedPost
+        accountName="React"
+        postOwnerAccountName="danabramov.bsky.social"
+        postOwnerUserName="dan_abramov"
+        postContent="happy 10th birthday to @reactjs!"
+        postDate="May 29"
+        commentNumber="46"
+        likesNumber="675"
+        repostsNumber="3701"
+        interactionsNumber="1.1M"
       />
     </div>
   );

@@ -10,3 +10,7 @@
   margin: auto;
   display: flex;
 }
+
+.background-container {
+  background-color: var(--dark-navy);
+}

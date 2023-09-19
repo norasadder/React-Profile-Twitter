@@ -1,14 +1,16 @@
 import "./App.css";
 import Navbar from "./Navbar";
-import NewsFeed from "./Profile";
+import Profile from "./Profile";
 import SideBar from "./SideBar";
 
 export default function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <NewsFeed />
-      <SideBar />
+    <div className="background-container">
+      <div className="app">
+        <Navbar />
+        <Profile />
+        <SideBar />
+      </div>
     </div>
   );
 }

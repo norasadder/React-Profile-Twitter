@@ -3,15 +3,16 @@
   --light-navy: #16171a;
   --blue-button: #3f96d1;
   --blue-font: #1a67a0;
+  --gray-font: #818080;
+  --gray-border: #464646;
 }
 
-.news-feed {
+.profile {
   width: 78%;
   background-color: var(--dark-navy);
-  height: 100vh;
   margin-left: 18vw;
   color: white;
-  border: solid 1px rgb(70, 70, 70);
+  border: solid 1px var(--gray-border);
 }
 
 .profile-header {
@@ -90,7 +91,7 @@
 
 .profile-buttons > button {
   background-color: transparent;
-  border: solid 1px #818080;
+  border: solid 1px var(--gray-font);
   color: white;
 }
 
@@ -181,7 +182,7 @@
   height: 100%;
   justify-content: center;
   align-items: center;
-  color: #818080;
+  color: var(--gray-font);
 }
 
 .joined-date img {
@@ -198,7 +199,6 @@
   color: white;
   font-size: 15px;
   height: 4vh;
-  /* background-color: #3f96d1; */
   padding-top: 1%;
 }
 
@@ -209,6 +209,120 @@
 }
 
 .followers-following span {
-  color: #818080;
+  color: var(--gray-font);
   font-weight: lighter;
+}
+
+.profile-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--gray-font);
+  padding: 5% 10% 3% 10%;
+  border-bottom: solid 1px var(--gray-border);
+}
+
+.reposted-post {
+  border-bottom: solid 1px var(--gray-border);
+  padding-bottom: 1%;
+}
+
+.repost-header {
+  height: 4vh;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding-left: 6%;
+  color: var(--gray-font);
+}
+
+.repost-header img {
+  height: 50%;
+  width: auto;
+  padding-right: 2%;
+}
+
+.repost-body {
+  display: flex;
+  padding-left: 2%;
+}
+
+.repost-owner-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.repost-owner-img img {
+  height: 80%;
+  width: auto;
+}
+
+.repost-owner-info span {
+  color: var(--gray-font);
+  font-size: 13px;
+}
+
+.repost-owner-info-content-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+  font-size: 14px;
+  line-height: 20px;
+  width: 90%;
+}
+
+.repost-owner-info-more-container {
+  display: flex;
+  justify-content: space-between;
+  height: 3vh;
+}
+
+.repost-body button {
+  background-color: transparent;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.repost-body img {
+  height: 100%;
+  width: auto;
+}
+
+.post-interactions {
+  height: 4vh;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2%;
+  padding-right: 3%;
+}
+
+.post-interactions-item {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.post-interactions-item img {
+  height: 60%;
+  width: auto;
+}
+
+.post-interactions-item p {
+  font-size: 13px;
+  color: var(--gray-font);
+  padding-left: 30%;
 }
