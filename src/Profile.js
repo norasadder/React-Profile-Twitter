@@ -44,6 +44,46 @@ function ProfileButtons() {
   );
 }
 
+function ProfileInfo({
+  accountName,
+  userName,
+  bio,
+  bioLink,
+  joinDate,
+  followersNumber,
+  followingNumber,
+}) {
+  return (
+    <div className="profile-info-container">
+      <div className="name-username-container">
+        <div className="name-username">
+          <p className="account-name">{accountName}</p>
+          <p className="user-name">@{userName}</p>
+        </div>
+      </div>
+      <div className="bio">{bio}</div>
+      <div className="link-joined-date-container">
+        <div className="bio-link">
+          <img src={require(`./images/link.png`)}></img>
+          <a href={bioLink}>{bioLink}</a>
+        </div>
+        <div className="joined-date">
+          <img src={require(`./images/calendar.png`)}></img>
+          <p>Joined {joinDate}</p>
+        </div>
+      </div>
+      <div className="followers-following">
+        <p>
+          {followingNumber} <span> Following </span>
+        </p>
+        <p>
+          {followersNumber} <span>Followers</span>
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function NewsFeed() {
   return (
     <div className="news-feed">
@@ -53,6 +93,15 @@ export default function NewsFeed() {
         <ProfilePicture accountName="React" />
         <ProfileButtons />
       </div>
+      <ProfileInfo
+        accountName="React"
+        userName="reactjs"
+        bio="The library for web and native user interfaces"
+        bioLink="react.dev"
+        joinDate="July 2013"
+        followingNumber="267"
+        followersNumber="708.1K"
+      />
     </div>
   );
 }
