@@ -42,6 +42,7 @@ function Trends() {
     <div className="trends-container">
       <p>Trends for you</p>
       {arr}
+      <button className="show-more">show more</button>
     </div>
   );
 }
