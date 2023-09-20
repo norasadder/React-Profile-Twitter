@@ -1,8 +1,10 @@
 :root {
   --dark-navy: #040707;
-  --light-navy: #16171a;
+  --light-navy: #2b2e35;
   --blue-button: #3f96d1;
   --blue-font: #1a67a0;
+  --gray-font: #818080;
+  --gray-border: #464646;
 }
 
 .side-bar {
@@ -10,4 +12,73 @@
   background-color: var(--dark-navy);
   height: 100vh;
   color: white;
+}
+
+.search-bar {
+  height: 6vh;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-navy);
+  width: 85%;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.search-bar img {
+  height: 40%;
+  width: auto;
+  padding-left: 5%;
+}
+
+.search-bar input {
+  background-color: transparent;
+  border: none;
+  width: 80%;
+  padding-left: 5%;
+}
+
+.you-might-like-container {
+  width: 85%;
+  margin: auto;
+  border-radius: 25px;
+  background-color: var(--light-navy);
+  margin-top: 5%;
+  padding: 10px;
+  padding-top: 5px;
+  box-sizing: border-box;
+}
+
+.trends-container {
+  width: 85%;
+  margin: auto;
+  border-radius: 25px;
+  background-color: var(--light-navy);
+  margin-top: 5%;
+  padding: 10px;
+  padding-top: 5px;
+  box-sizing: border-box;
+}
+
+.trends-container > p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+}
+
+.trend-item {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+  padding-top: 5%;
+}
+.trend-item-content {
+  font-size: 16px;
+}
+
+.trend-item-posts-number {
+  font-size: 15px;
+  color: var(--gray-font);
 }

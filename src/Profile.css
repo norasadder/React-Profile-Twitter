@@ -7,6 +7,10 @@
   --gray-border: #464646;
 }
 
+button {
+  cursor: pointer;
+}
+
 .profile {
   width: 78%;
   background-color: var(--dark-navy);
@@ -318,7 +322,7 @@
 }
 
 .post-interactions-item img {
-  height: 60%;
+  height: 90%;
   width: auto;
 }
 

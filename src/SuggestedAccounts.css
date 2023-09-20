@@ -1,0 +1,121 @@
+:root {
+  --dark-navy: #040707;
+  --light-navy: #16171a;
+  --blue-button: #3f96d1;
+  --blue-font: #1a67a0;
+  --gray-font: #818080;
+  --gray-border: #464646;
+}
+
+button {
+  cursor: pointer;
+}
+
+.suggested-account-container {
+  display: flex;
+  padding-top: 1%;
+  padding-left: 2%;
+  margin-bottom: 3%;
+}
+
+.suggested-user-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suggested-user-img img {
+  height: 80%;
+  width: auto;
+  border-radius: 50%;
+}
+
+.suggested-account-info {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding-left: 2%;
+}
+
+.suggested-account-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding-right: 2%;
+}
+
+.suggested-account-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.suggested-account-name p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.suggested-account-follow-button {
+  background-color: white;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.suggested-account-username {
+  font-size: 14px;
+  color: var(--gray-font);
+}
+
+.suggested-account-accountname {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.suggested-account-accountname > span {
+  padding-right: 5px;
+  display: inline-block;
+}
+
+.suggested-account-accountname img {
+  height: 60%;
+  width: auto;
+}
+
+.suggested-account-bio {
+  padding-top: 1%;
+}
+
+.who-to-follow-container {
+  margin-bottom: 5%;
+  padding-top: 10px;
+}
+
+.who-to-follow-header {
+  padding-left: 2%;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+
+.who-to-follow-show-more {
+  color: var(--blue-button);
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  padding-left: 2%;
+}

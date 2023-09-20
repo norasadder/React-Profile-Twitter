@@ -1,4 +1,5 @@
 import "./Profile.css";
+import SuggestedAccounts from "./SuggestedAccounts";
 
 function ProfileHeader({ accountName, postsNumber }) {
   return (
@@ -25,7 +26,7 @@ function CoverPicture({ accountName }) {
 function ProfilePicture({ accountName }) {
   return (
     <div className="profile-picture">
-      <img src={require(`./images/React-profile.png`)}></img>
+      <img src={require(`./images/${accountName}-profile.png`)}></img>
     </div>
   );
 }
@@ -88,13 +89,13 @@ function ProfileNavbar() {
   const NAVBAR_ITEMS = ["Posts", "Replies", "Media", "Likes"];
   let arr = [];
   NAVBAR_ITEMS.forEach((item) => {
-    arr.push(<div>{item}</div>);
+    arr.push(<div key={item}>{item}</div>);
   });
 
   return <div className="profile-navbar">{arr}</div>;
 }
 
-function ReostedPost({
+function RepostedPost({
   accountName,
   postOwnerAccountName,
   postOwnerUserName,
@@ -131,22 +132,30 @@ function ReostedPost({
 
           <div className="post-interactions">
             <div className="post-interactions-item">
-              <img src={require("./images/comment.png")} />
+              <button>
+                <img src={require("./images/comment.png")} />
+              </button>
               <p> {commentNumber} </p>
             </div>
 
             <div className="post-interactions-item">
-              <img src={require("./images/like.png")} />
+              <button>
+                <img src={require("./images/like.png")} />
+              </button>
               <p> {likesNumber} </p>
             </div>
 
             <div className="post-interactions-item">
-              <img src={require("./images/repost.png")} />
+              <button>
+                <img src={require("./images/repost.png")} />
+              </button>
               <p> {repostsNumber} </p>
             </div>
 
             <div className="post-interactions-item">
-              <img src={require("./images/insight.png")} />
+              <button>
+                <img src={require("./images/insight.png")} />
+              </button>
               <p> {interactionsNumber} </p>
             </div>
 
@@ -156,7 +165,7 @@ function ReostedPost({
           </div>
         </div>
         <button>
-          <img src={require("./images/More2.png")} />
+          <img src={require("./images/more-gray.png")} />
         </button>
       </div>
     </div>
@@ -164,6 +173,26 @@ function ReostedPost({
 }
 
 export default function Profile() {
+  const SUGGESTED_ACCOUNTS = [
+    {
+      accountName: "freeCodeCamp.org",
+      userName: "freeCodeCamp",
+      bio: "We're a community of millions of people who are building new skills and getting new jobs together. A 501(c)(3) public charity. Tweets by @abbeyrenn",
+      isVerified: true,
+    },
+    {
+      accountName: "TypeScript",
+      userName: "typescript",
+      bio: "TypeScript is a language for application-scale JavaScript development. It's a typed superset of JavaScript that compiles to plain JavaScript.",
+      isVerified: false,
+    },
+    {
+      accountName: "Tailwind CSS",
+      userName: "tailwindcss",
+      bio: "The utility-first CSS framework. Rapidly build modern websites, without ever leaving your HTML.",
+      isVerified: true,
+    },
+  ];
   return (
     <div className="profile">
       <ProfileHeader accountName="React" postsNumber="2611" />
@@ -182,7 +211,7 @@ export default function Profile() {
         followersNumber="708.1K"
       />
       <ProfileNavbar />
-      <ReostedPost
+      <RepostedPost
         accountName="React"
         postOwnerAccountName="danabramov.bsky.social"
         postOwnerUserName="dan_abramov"
@@ -192,6 +221,10 @@ export default function Profile() {
         likesNumber="675"
         repostsNumber="3701"
         interactionsNumber="1.1M"
+      />
+      <SuggestedAccounts
+        SUGGESTED_ACCOUNTS={SUGGESTED_ACCOUNTS}
+        title="Who to follow"
       />
     </div>
   );
