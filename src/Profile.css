@@ -259,6 +259,7 @@
 .repost-owner-img img {
   height: 80%;
   width: auto;
+  border-radius: 50%;
 }
 
 .repost-owner-info span {

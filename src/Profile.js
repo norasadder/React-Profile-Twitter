@@ -114,7 +114,7 @@ function ReostedPost({
 
       <div className="repost-body">
         <div className="repost-owner-img">
-          <img src={require("./images/Profile.png")} />
+          <img src={require(`./images/${postOwnerUserName}.jpg`)} />
         </div>
 
         <div className="repost-owner-info-content-container">
